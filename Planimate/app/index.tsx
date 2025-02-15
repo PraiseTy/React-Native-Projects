@@ -1,7 +1,8 @@
-import { View, Text, SafeAreaView, Image, TouchableOpacity } from 'react-native';
+import { View, Text, SafeAreaView, Image } from 'react-native';
 import React from 'react';
 import displayImage from '@/assets/images/display-picture2.png';
 import { router } from 'expo-router';
+import CustomButton from "@/components/CustomButton";
 
 const index = () => {
   return (
@@ -29,12 +30,7 @@ const index = () => {
           </View>
 
           <View className="w-full mt-5 px-10">
-            <TouchableOpacity
-              onPress={() => router.push('/category')}
-              className="w-full bg-[#1bb1b2] rounded-xl min-h-[62px] flex-row justify-center items-center"
-            >
-              <Text className="text-white font-bold text-lg">Get Started</Text>
-            </TouchableOpacity>
+              <CustomButton title='Get Started' onPress={()=>router.push('/category')}/>
           </View>
         </View>
       </SafeAreaView>
