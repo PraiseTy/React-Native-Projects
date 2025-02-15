@@ -1,10 +1,10 @@
-import { View, Text } from 'react-native';
 import React, { createContext, ReactNode, useState } from 'react';
 
 interface Task {
   name: string;
   description?: string;
   dueDate?: string;
+  category?: string;
 }
 
 interface TaskContextType {

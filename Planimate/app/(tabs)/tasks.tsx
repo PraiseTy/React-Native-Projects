@@ -12,14 +12,17 @@ const Tasks = () => {
 
   return (
     <View>
-      <SafeAreaView>
+      <SafeAreaView className="mt-10">
         {tasks.length > 0 ? (
           tasks.map((task, index) => (
-            <View key={index} className="mb-5">
-              <Text>{task.name}</Text>
-              <Text>{task.description}</Text>
-              <Text>Due Date: {task.dueDate}</Text>
-              <Text>Days Left: 14</Text>
+            <View
+              key={index}
+              className="mb-5 rounded-lg bg-white bg-opacity-80 border-gray-300 shadow-xl space-y-3 p-3"
+            >
+              <Text className="text-xl">Task: {task.name}</Text>
+              <Text className="text-md">Description: {task.description}</Text>
+              <Text className='text-md'>Due Date: {task.dueDate}</Text>
+              <Text className='text-md font-medium' >Category: {task.category}</Text>
             </View>
           ))
         ) : (
